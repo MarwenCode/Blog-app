@@ -1,0 +1,82 @@
+.navbar{
+    display: flex;
+    height: 40px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgb(107, 181, 250);
+    border-radius: 15px;
+
+    .leftnavbar{
+        flex : 6;
+        
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+       
+       
+
+        .list{
+            list-style-type: none;
+            display: flex;
+            align-items:center;
+            margin-left: 350px;
+            font-size: larger;
+
+            .item{
+                justify-content: baseline;
+                margin: 25px;
+                cursor: pointer;
+
+            }
+
+        }
+        
+        
+    }
+
+    .search{
+        flex:3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+       
+        
+
+
+        .inputSearch{
+            width: 370px;
+            border-radius: 15px;
+            height: 20px;
+           
+          
+        }
+
+        .Fasearch{
+            font-size: 20px;
+            color: rgb(46, 44, 44);
+            cursor: pointer;
+            margin-right: 290px;
+            position: absolute;
+            margin-top: 2px;
+           
+         
+            
+        }
+        
+    }
+
+    .signin{
+        flex:1;
+        font-size: larger;
+        display: flex;
+      
+
+        .signItem{
+            margin: 7px 7px;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    }
+}

@@ -44,7 +44,9 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-import authRoute from "./routes/auth.js"
+import authRoute from "./routes/auth.js";
+import userRoute from "./routes/users.js";
+import postRoute from "./routes/posts.js";
 
 
 
@@ -67,6 +69,8 @@ const connect = async () => {
 //middlewares
 app.use(express.json())
 app.use("/api/auth", authRoute)
+app.use("/api/user", userRoute)
+app.use("/api/post", postRoute)
 
 
 

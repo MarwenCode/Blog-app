@@ -1,0 +1,81 @@
+.ProfileSideBar{
+    flex:3;
+    background-color: rgb(243, 237, 248);
+    width: 350px;
+    height: 500px;
+    margin-top: 7px;
+    float: right;
+    font-size: 18px;
+    border-radius: 20px;
+
+    .profileUp{
+     flex: 3;
+     align-items: center;
+     justify-content: center;
+     margin: 80px  100px;
+     border-bottom: 1px solid grey;
+     margin: 40px;
+     padding: 10px;
+     width: 80%;
+     border-top: solid 1px #a7a4a4;
+     border-bottom: solid 1px #a7a4a4;
+     text-align: center;
+     font-family: "Varela Round", sans-serif;
+     font-size: 12px;
+     line-height: 19px;
+     color: #222222;
+     font-weight: 600;
+     height: 150px;
+    
+
+     .profilepic{
+        display: block;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 15px;
+        cursor: pointer;
+        background-color: #84dfe6;
+        margin-left: 60px;
+     }
+
+     .name{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-right: 33%;
+        margin-top: 35px;
+        
+     }
+
+
+
+
+    }
+
+
+    .profileDown{
+     flex: 9;
+     margin-top: 10%;
+     font-family: "Varela Round", sans-serif;
+   
+
+     .profileInfo{
+        margin-bottom: 450px;
+
+
+
+
+        
+     }
+     
+    }
+
+
+
+
+
+
+}

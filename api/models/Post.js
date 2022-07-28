@@ -1,26 +1,26 @@
-// const mongoose = require(mongoose);
+import mongoose from "mongoose";
 
-// const PostSchema = new mongoose.Schema({
-//     title:{
-//         type:String,
-//         required:true,
-//         unique:true,
-//     },
-//     description:{
-//         type:String,
-//         required:true,
-//     },
-//     photo:{
-//         type:String,
-//         required:false,
-//     },
-//     username:{
-//         type:String,
-//         required:true,
-//     },
+const PostSchema = new mongoose.Schema({
+    title:{
+        type:String,
+        required:true,
+        unique:true,
+    },
+    description:{
+        type:String,
+        required:true,
+    },
+    photo:{
+        type:String,
+        required:false,
+    },
+    username:{
+        type:String,
+        required:true,
+    },
   
 
-// }, { timestamps: true})
+}, { timestamps: true})
 
-// module.exports = mongoose.model("Post", PostSchema)
+export default mongoose.model("post", PostSchema)
 
