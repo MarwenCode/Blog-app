@@ -39,6 +39,7 @@ authRoute.post("/login", async(req, res) => {
         !validated && res.status(400).json("wrong password")
 
         res.status(200).json(user)
+        console.log(req.body)
         
     } catch (error) {
         res.status(500).json(error)

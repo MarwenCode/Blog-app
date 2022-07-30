@@ -1,0 +1,34 @@
+import React, {useContext, useState,useEffect}from 'react';
+import "./home.scss"
+import Header from '../../components/header/Header';
+import Posts from '../../components/posts/Posts';
+import { useLocation } from 'react-router-dom';
+import axios from "axios"
+
+const Home = () => {
+  const [posts, setPosts] =useState([])
+  const {search} = useLocation()
+
+
+
+  useEffect(() => {
+      const fetchPosts = async() => {
+          const res = await axios.get("/post")
+          console.log(res)
+          setPosts(res.data)
+          
+      }
+
+      fetchPosts()
+  }, [])
+
+  return (
+    <div className='home'>
+        <Header />
+        <Posts  posts={posts}/>
+        
+    </div>
+  )
+}
+
+export default Home

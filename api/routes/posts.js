@@ -53,7 +53,7 @@ postRoute.delete("/:id", async(req, res) => {
 })
 
 //Get Post
-postRoute.get("/", async(req, res) => {
+postRoute.get("/:id", async(req, res) => {
     try {
         
         const post = await Post.findById(req.params.id)
@@ -68,11 +68,11 @@ postRoute.get("/", async(req, res) => {
 //Get All posts
 
 postRoute.get("/", async (req, res) => {
-    const username = req.query.user;
+    const users = req.body.userId;
     try {
         let posts;
-        if (username) {
-          posts = await Post.find({ username });
+        if (users) {
+          posts = await Post.find({ users });
         }  else {
           posts = await Post.find();
         }

@@ -2,7 +2,7 @@
     display: flex;
     height: 40px;
     font-family: "Varela Round", sans-serif;
-    background-color: rgb(107, 181, 250);
+    background-color: #0a577e;
     border-radius: 15px;
 
     .leftnavbar{
@@ -41,6 +41,7 @@
         justify-content: center;
         position: relative;
        
+       
         
 
 
@@ -70,13 +71,25 @@
         flex:1;
         font-size: larger;
         display: flex;
+        margin-top: 10px;
       
 
         .signItem{
-            margin: 7px 7px;
             justify-content: center;
-            align-items: center;
-        }
+            // align-items: center;
+            cursor: pointer;
+           
+       
+
+        } 
         
+    }
+
+
+    .logout{
+        justify-content: center;
+        // align-items: center;
+        cursor: pointer;
+
     }
 }
