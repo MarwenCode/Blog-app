@@ -1,0 +1,23 @@
+.singlePost{
+  
+    // width:100%;
+
+
+    .singlePostWrapper{
+        padding: 50px 50px;
+        width: 100%;
+        background-color: aqua;
+        height: 200px;
+        justify-content: center;
+        margin-left: 50px;
+
+
+        .singlePostImg{
+            width: 60%;
+            height: 300px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+    }
+}

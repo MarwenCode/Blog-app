@@ -8,6 +8,8 @@ import Register from './pages/register/Register';
 import Login from './pages/login/Login';
 import { AppContext } from './context/context';
 import { useContext } from 'react';
+import Write from './pages/write/Write';
+import SinglePost from './components/singlePost/SinglePost';
 
 
 
@@ -21,6 +23,9 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/register" element={<Register />}/>
         <Route path="/login" element={user ? <Home /> : <Login />}/>
+        <Route path="/write" element={<Write />}/>
+        <Route path="/post/:postId" element={<SinglePost/>}/>
+      
         
       </Routes>
     </div>

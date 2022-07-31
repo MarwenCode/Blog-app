@@ -19,12 +19,16 @@ const Nabar = () => {
     
       <div className="leftnavbar">
         <ul className="list">
-          <li className="item">Posts</li>
+        <li className="item">About Me & My Blogs</li>
           <Link to="/"   className='link'>
           <li className="item">Home</li>
           </Link>
-        
+          <Link to="write" className="link">
           <li className="item">Write</li>
+          </Link>
+          <li className="item">Profile</li>
+          
+        
         </ul>
       </div>
       <div className="search">
