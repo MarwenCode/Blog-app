@@ -1,0 +1,106 @@
+.profile{
+    display: flex;
+    // width:750px;
+    // height:550px;
+
+    .updateTitle{
+        font-size: 30px;
+        margin-bottom: 20px;
+        color: #0a577e;
+        margin:1px
+    }
+    
+
+    .settingContainer{
+        display:flex;
+        margin: 50px 50px;
+        width:750px;
+        height:550px;
+        flex: 9;
+        padding: 20px;
+        margin-left: 0px;
+     
+
+
+        // .settingTitle{
+        //     // display: flex;
+        //     align-items: center;
+        //     justify-content: space-between;
+
+       
+            
+        // }
+
+        .settingForm{
+            display: flex;
+            flex-direction: column;
+            margin-left: 0px;
+
+            label {
+                font-size: 20px;
+                margin-top: 20px;
+              }
+
+            .settingProfilePicutre img{
+                height: 70px;
+                width: 70px;
+                border-radius: 20px;
+                object-fit: cover; 
+
+               
+
+                // .settingsPPIcon{
+                //     width: 25px;
+                //     height: 25px;
+                //     padding: 5px;
+                //     display: flex;
+                //     justify-content: center;
+                //     align-items: center;
+                //     border: none;
+                //     border-radius: 50%;
+                //     margin-left: 10px;
+                //     color: white;
+                //     background-color: lightcoral;
+                //     cursor: pointer; 
+                // }
+
+
+
+            }
+
+
+
+
+            .settingInput {
+                flex-direction: column;
+                width: 100%;
+                border: none;
+            }
+
+            .settingInput:focus{
+                outline-style: none;
+            }
+
+            .settingsSubmit{
+                margin: 10px 0px;
+                width: 20%;
+                background-color: #0a577e;
+                color: white;
+                border-radius: 10px;
+
+            }
+
+         
+
+         
+
+
+         
+
+
+
+
+        }
+
+    }
+}

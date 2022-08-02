@@ -26,7 +26,10 @@ const Nabar = () => {
           <Link to="write" className="link">
           <li className="item">Write</li>
           </Link>
+          <Link to="profile" className='link'>
           <li className="item">Profile</li>
+          </Link>
+          
           
         
         </ul>

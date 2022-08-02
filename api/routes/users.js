@@ -6,10 +6,12 @@ const userRoute = express.Router();
 userRoute.put("/:id", async(req, res) => {
     try {
         const updateUser = await User.findByIdAndUpdate(
-            req.params.id, 
-            {$set: req.body},
-            {new: true}
-        );
+            req.params.id,{
+                $set: req.body,
+
+            },
+          
+            {new: true});
          res.status(200).json(updateUser)
         
     } catch (error) {

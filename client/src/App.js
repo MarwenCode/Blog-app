@@ -10,6 +10,7 @@ import { AppContext } from './context/context';
 import { useContext } from 'react';
 import Write from './pages/write/Write';
 import SinglePost from './components/singlePost/SinglePost';
+import Profile from './pages/profile/Profile';
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/login" element={user ? <Home /> : <Login />}/>
         <Route path="/write" element={<Write />}/>
         <Route path="/post/:postId" element={<SinglePost/>}/>
+        <Route path="/profile" element={<Profile/>}/>
       
         
       </Routes>

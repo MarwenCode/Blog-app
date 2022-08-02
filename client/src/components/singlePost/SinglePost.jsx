@@ -3,12 +3,17 @@ import axios from "axios";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
 import { Link, useLocation } from "react-router-dom";
-import "./singlepost.scss"
+import "./singlepost.scss";
 import ProfileSideBar from "../profileSideBar/ProfileSideBar";
 
 const SinglePost = () => {
-    const publicFolder = "http://localhost:8000/images/";
+  const publicFolder = "http://localhost:8000/images/";
   const { user } = useContext(AppContext);
+
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [updateMode, setUpdateMode] = useState(false);
+
   const location = useLocation();
   console.log(location);
   const path = location.pathname.split("/")[2];
@@ -20,25 +25,75 @@ const SinglePost = () => {
     const getPost = async () => {
       const res = await axios.get("/post/" + path);
       console.log(res.data);
-      setPost(res.data)
+      setPost(res.data);
+      setTitle(res.data.title);
+      setDescription(res.data.description)
+
     };
 
     getPost();
   }, [path]);
 
+  const handleUpdate = async () => {
+    try {
+      await axios.put(`/post/${post._id}`, {
+        username: user.username,
+        title,
+        description,
+      });
+      setUpdateMode(false)
+    
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  console.log(handleUpdate)
+
+  const handleDelete = async() => {
+    try {
+
+      await axios.delete(`/post/${post._id}`);
+
+      // or we can do also 
+      //  await axios.delete(`/posts/${post._id}`, {
+      //   data : {username: user.username}
+      // });
+      window.location.replace("/");
+      
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+
+
+
+
+
   return (
     <div className="singlePost">
-        <ProfileSideBar />
+      <ProfileSideBar />
       <div className="singlePostWrapper">
         <img className="singlePostImg" src={publicFolder + post.photo} alt="" />
-
-        <h1 className="singlePostTitle">
-            {post.title}
-          <div className="singlePostEdit">
-            <i className="singlePostIcon far fa-edit"></i>
-            <i className="singlePostIcon far fa-trash-alt"></i>
-          </div>
-        </h1>
+        {updateMode ? (
+          <input
+            className="singlePostTitleInput"
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+        ) : (
+          <h1 className="singlePostTitle">
+            {title}
+            <div className="singlePostEdit">
+              <i
+                className="singlePostIconEdit far fa-edit"
+                onClick={() => setUpdateMode(true)}></i>
+              <i className="singlePostIconDelete far fa-trash-alt"  onClick={handleDelete}></i>
+            </div>
+          </h1>
+        )}
 
         <div className="singlePostInfo">
           <span>
@@ -47,12 +102,24 @@ const SinglePost = () => {
           </span>
           <span></span>
         </div>
-        <textarea type="text" className="singlePostDescInput" autoFocus />
-        
 
-        <p className="singlePostDesc">{post.description}</p>
-
-        <button className="signlePostButton">Update</button>
+        {updateMode ? (
+          <textarea
+            type="text"
+            className="singlePostDescInput"
+            autoFocus
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+        ) : (
+          <p className="singlePostDesc">{description}</p>
+        )}
+        {/* <p className="singlePostDesc">{post.description}</p> */}
+        {updateMode && (
+          <button className="signlePostButton" onClick={handleUpdate}>
+            Update
+          </button>
+        )}
       </div>
     </div>
   );
