@@ -10,20 +10,32 @@ const Profile = () => {
     const [email, setEmail] = useState("");
     const [password, setPasswrod] = useState("")
     const [successMessage, setSuccessMessage] = useState(false)
+    const [file, setFile] = useState(null)
+    
 
 
     const handleSubmit = async (e) => {
       e.preventDefault()
       dispatch({type:"UPDATE_START"})
-      const updateUser = {
+      const updatedUser = {
        userId: user._id,
       username,
         email,
         password
+      };
+      if(file) {
+        const data = new FormData();
+        const filename = Date.now() + file.name;
+        data.append("name", filename);
+        data.append("file", file);
+        updatedUser.profilePic = filename;
+        try {
+          await axios.post("/upload", data);
+        } catch (err) {}
       }
 
       try {
-        const res = await axios.put("/user/" + user._id, updateUser)
+        const res = await axios.put("/user/" + user._id, updatedUser)
     
         console.log(res)
         setSuccessMessage(true)
@@ -52,11 +64,20 @@ const Profile = () => {
         <form className="settingForm" onSubmit={handleSubmit} >
           <label></label>
           <div className="settingProfilePicutre">
-            <img />
+            {/* <img src={file ? URL.createObjectURL(file) : + publicFolder+user.profilePic} */}
+             <img src={file && URL.createObjectURL(file)}
+            
+            
+            />
             <label >
               <i className="settingsPPIcon far fa-user-circle"></i>
             </label>
-            <input type="file"  className="fileInput" />
+            <input 
+            type="file" 
+             className="fileInput"
+             onChange={(e) => setFile(e.target.files[0])}
+             
+             />
           </div>
 
           <div className="inputText">

@@ -1,0 +1,42 @@
+.aboutme{
+    display: flex;
+    height:100%;
+    width:100%;
+
+    .leftSection {
+        background-color: aqua;
+        flex:3
+
+    }
+
+    .bloc{
+        background-color: rgb(103, 209, 100);
+        flex: 7;
+
+        .singlePost{
+            width:250px;
+
+            .singlePostWrapper{
+                border-bottom: 1px solid grey;
+
+                .singlePostImg {
+                    width: 650px;
+                    height: 150px;
+
+                }
+            }
+            
+
+        }
+
+    }
+
+    .rightSection {
+        background-color: rgb(31, 93, 165);
+        flex:3
+
+    }
+
+
+
+}

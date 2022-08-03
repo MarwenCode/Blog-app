@@ -82,6 +82,16 @@
        
 
         } 
+
+        .topImg {
+            width: 50px;
+            height: 40px;
+            border-radius: 60%;
+            object-fit: cover;
+            margin-right: 15px;
+            cursor: pointer;
+            margin: -9px 20px
+          }
         
     }
 
