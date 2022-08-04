@@ -4,26 +4,72 @@
     width:100%;
 
     .leftSection {
-        background-color: aqua;
+        // background-color: aqua;
         flex:3
 
     }
 
     .bloc{
-        background-color: rgb(103, 209, 100);
+        // background-color: rgb(103, 209, 100);
         flex: 7;
 
         .singlePost{
             width:250px;
+            height: 350px;
+            border-bottom: 1px solid grey;
+
 
             .singlePostWrapper{
-                border-bottom: 1px solid grey;
-
+               
                 .singlePostImg {
                     width: 650px;
                     height: 150px;
 
                 }
+
+               .singlePostTitle{
+                font-size: 20px;
+                font-family: "Varela Round", Arial, Helvetica, sans-serif;
+               }
+
+               .singlePostEdit{
+                // display: inline-block;
+                display: flex;
+                width: 50px;
+            
+
+                .singlePostIconEdit{
+                   margin: 3px 5px;
+                }
+                .singlePostIconDelete{
+                   margin: 3px 5px;
+
+                }
+
+               }
+
+
+               .postInfo {
+                 display: flex;
+                 font-family: "Varela Round", Arial, Helvetica, sans-serif;
+                 
+
+                 .author{
+                    margin: 5px;
+                 }
+
+                 .postDate{
+                    margin: 5px;
+                    justify-content: center;
+        
+                 }
+               }
+
+               .postDesc {
+                font-family: "Varela Round", Arial, Helvetica, sans-serif;
+                width:100%
+               }
+            
             }
             
 
