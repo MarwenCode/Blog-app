@@ -1,5 +1,5 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Nabar from './components/navbar/Nabar';
+import Navbar from './components/navbar/Navbar';
 import ProfileSideBar from './components/profileSideBar/ProfileSideBar';
 import Posts from './components/posts/Posts';
 import Header from './components/header/Header';
@@ -20,7 +20,7 @@ function App() {
   return (
     <Router>
     <div className="container">
-      <Nabar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/register" element={<Register />}/>

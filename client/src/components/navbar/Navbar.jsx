@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { AppContext } from '../../context/context';
 
-const Nabar = () => {
+const Navbar = () => {
   const {user, dispatch} = useContext(AppContext)
   const publicFolder = "http://localhost:8000/images/";
 
@@ -61,4 +61,4 @@ const Nabar = () => {
   );
 }
 
-export default Nabar
+export default Navbar

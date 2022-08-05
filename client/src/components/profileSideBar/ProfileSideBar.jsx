@@ -4,13 +4,25 @@ import axios from "axios";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
 
+
+const getlocalStorage = () => {
+  let expression = localStorage.getItem("expression")
+  if(expression) {
+    return JSON.parse(localStorage.getItem("expression"))
+  }else {
+    return []
+
+  }
+}
+
 const ProfileSideBar = () => {
   const { user } = useContext(AppContext);
   const publicFolder = "http://localhost:8000/images/";
 
   const [expression, setExpression] = useState("");
-  const [inputGroup, setInputGroup] = useState([]);
+  const [inputGroup, setInputGroup] = useState(getlocalStorage());
   const [updateMode, setUpdateMode] = useState(false);
+  
 
   const handleExpression = (e) => {
     e.preventDefault();
@@ -25,17 +37,42 @@ const ProfileSideBar = () => {
 
   console.log(inputGroup);
 
-  const exp = localStorage.getItem("exp");
-  if (exp) {
-    return JSON.parse(localStorage.getItem("exp"));
-  }
+  useEffect(() => {
+    localStorage.setItem("expression", JSON.stringify(inputGroup))
+
+    // const exp = localStorage.getItem('expression')
+    // const initialValue = JSON.parse(exp);
+    // return initialValue || "";
+  }, [inputGroup])
+
+  // useEffect(() => {
+  // const exp = JSON.parse(localStorage.getItem("expression"))
+  // setInputGroup(exp)
+
+  // })
+
+
+
+
+// useEffect(() => {
+//   const exp = localStorage.getItem('expression')
+//   const initialValue = JSON.parse(exp);
+//   return initialValue || "";
+
+// }, [])
+
+
+
+    
+
 
   return (
     <div className="ProfileSideBar">
       <div className="profileUp">
         <img className="profilepic" src={publicFolder + user.profilePic} />
-        <span className="name">{user.username}</span>
+        <span className="name">{user?.username}</span>
       </div>
+     
       <div className="profileDown">
         <div className="profileInfo">
           <i

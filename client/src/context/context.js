@@ -15,7 +15,9 @@ const initialState = {
 export const AppProvider = ({children}) => {
     const [state, dispatch] = useReducer(reducer, initialState)
 
- 
+    useEffect(() => {
+        localStorage.setItem("user", JSON.stringify(state.user))
+    },[state.user])
 
 
 
