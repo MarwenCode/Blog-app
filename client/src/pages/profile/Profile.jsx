@@ -55,7 +55,7 @@ const Profile = () => {
   return (
     <>
 
-<div className="updateTitle"> update profile </div>
+{/* <div className="updateTitle"> update profile </div> */}
     <div className="profile">
          {/* <h1 className="updateTitle">Update profile</h1> */}
       <div className="settingContainer">

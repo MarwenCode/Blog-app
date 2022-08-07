@@ -3,7 +3,9 @@ import "./home.scss"
 import Header from '../../components/header/Header';
 import Posts from '../../components/posts/Posts';
 import { useLocation } from 'react-router-dom';
-import axios from "axios"
+import axios from "axios";
+
+
 
 const Home = () => {
   const [posts, setPosts] =useState([])

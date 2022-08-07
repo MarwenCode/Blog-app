@@ -1,7 +1,15 @@
 .profile{
-    display: flex;
-    // width:750px;
+    // display: flex;
+    width:750px;
     // height:550px;
+    position: absolute;
+    // top: 50%;
+    // left: 50%;
+    margin-top: 10px;
+    margin-left: 500px;
+    // width: 100px;
+    // height: 100px;
+   
 
     .updateTitle{
         font-size: 30px;
@@ -13,12 +21,14 @@
 
     .settingContainer{
         display:flex;
-        margin: 50px 50px;
+        margin: 30px 10px;
         width:750px;
-        height:550px;
+        height:300px;
         flex: 9;
         padding: 20px;
         margin-left: 0px;
+        background-color: #e3eaee;
+        border-radius: 20px;
      
 
 
@@ -65,7 +75,22 @@
                 // }
 
 
+              
 
+
+
+            }
+
+            .settingProfilePicutre{
+                
+
+
+                .fileInput{
+                    width:115px;
+                    cursor: pointer;
+                    background-color: #0a577e;
+                    
+                }
             }
 
 
@@ -87,6 +112,7 @@
                 background-color: #0a577e;
                 color: white;
                 border-radius: 10px;
+                cursor: pointer;
 
             }
 

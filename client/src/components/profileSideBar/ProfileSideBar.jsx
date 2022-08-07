@@ -30,10 +30,17 @@ const ProfileSideBar = () => {
       id: new Date().getTime().toString(),
       expression: expression,
     };
-    setInputGroup([...inputGroup, newExpression]);
+    setInputGroup([newExpression]);
+    // setInputGroup(e.target.value);
+
     setExpression("");
     setUpdateMode(false)
   };
+
+
+
+
+
 
   console.log(inputGroup);
 
@@ -87,10 +94,12 @@ const ProfileSideBar = () => {
                 autoFocus
                 value={expression}
                 onChange={(e) => setExpression(e.target.value)}
+            
+                // onChange={handleExpression}
               />
               <button
                 className="ExpressionBtn"
-                onClick={handleExpression}></button>
+                onClick={handleExpression}>update</button>
             </form>
           )} 
 

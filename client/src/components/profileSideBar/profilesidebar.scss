@@ -64,6 +64,74 @@
 
      .profileInfo{
         margin-bottom: 450px;
+        display: block;
+        
+
+        .singlePostIconEdit{
+         // float: right;
+         cursor: pointer;
+         margin-left: 300px;
+       
+        }
+
+
+        .profileItems{
+         // display: flex;
+        
+
+         .item{
+            border: none;
+            width:90%;
+            height: 60px;
+            padding: 0px;
+            text-align: start;
+            resize: none;
+            display:block;
+            margin: 10px;
+            background-color: #a7a4a4;
+            border-radius: 10px;
+            font-family: "Lora", sans-serif;
+          
+          
+
+         }
+         .item:focus{
+            outline:none;
+            margin: 0px;
+            
+           }
+
+         .ExpressionBtn{
+            width:80px;
+            height: 30px;
+            color:rgb(21, 23, 24);
+            cursor: pointer;
+            margin:10px;
+            border-radius: 5px;
+         }
+
+         .ExpressionBtn:hover{
+            background-color: #0a577e;
+            color:rgb(26, 32, 37)
+          
+         }
+        
+        }
+
+        .inputExpression{
+         width: 90%;
+         margin: 5px;
+         height:200px;
+       
+
+            .expression{
+
+            }
+
+        }
+
+        
+        
 
 
 

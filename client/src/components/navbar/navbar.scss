@@ -1,9 +1,9 @@
 .navbar{
     display: flex;
-    height: 40px;
+    height: 45px;
     font-family: "Varela Round", sans-serif;
     background-color: #0a577e;
-    border-radius: 15px;
+    // border-radius: 15px;
 
     .leftnavbar{
         flex : 6;
@@ -26,9 +26,34 @@
                 justify-content: baseline;
                 margin: 25px;
                 cursor: pointer;
+                position: relative;
+                width: 100%;
+                justify-content: center;
+
+              
+    
 
             }
-
+            .item::before{
+                // opacity: 1;
+                // border-bottom: 5px;
+                content:"";
+                position: absolute;
+                background-color: rgb(24, 124, 206);
+                // border-bottom: 2px solid black;
+                width:0;
+                height: 3px;
+                bottom: -10px;
+                justify-content: center;
+                left: 0;
+                transition: 0.5 ease;
+           
+            }
+            .item:hover:before{
+                width: 60%;
+                justify-content: center;
+            }
+           
         }
         
         
@@ -64,6 +89,12 @@
          
             
         }
+
+        // .searchTerm {
+        //     width:250px;
+        //     height:400px;
+        //     margin:40px;
+        // }
         
     }
 

@@ -73,7 +73,7 @@ const Write = () => {
           onChange={(e) => setFile(e.target.files[0])}
           />
           <input
-            className="writeInput"
+            className="title"
             placeholder="Title"
             type="text"
             autoFocus={true}
@@ -81,7 +81,7 @@ const Write = () => {
           />
         </div>
         <div className="writeFormGroup">
-          <input
+          <textarea
             className="writeInput writeText"
             placeholder="Tell your story..."
             type="text"
