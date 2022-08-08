@@ -14,6 +14,11 @@ const initialState = {
 
 export const AppProvider = ({children}) => {
     const [state, dispatch] = useReducer(reducer, initialState)
+    const [theme, setTheme]= useState("light");
+
+    const toggleTheme = () => {
+        setTheme((currentThem) => (currentThem === 'light' ? "dark" : "light"))
+      }
 
     useEffect(() => {
         localStorage.setItem("user", JSON.stringify(state.user))
@@ -22,11 +27,13 @@ export const AppProvider = ({children}) => {
 
 
 
+
+
     return(
         <AppContext.Provider value={{
             user: state.user,
             isFetching: state.isFetching,
-            error: state.error,
+            error: state.error,toggleTheme,
             dispatch
 
         }}        
