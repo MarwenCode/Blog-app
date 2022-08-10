@@ -45,13 +45,11 @@ const Write = () => {
 
 
   return (
-    <>
+    <section className="profile">
  
     <div className="profilebar">
     <ProfileSideBar />
-    {/* <div className="publishDiv"> */}
-       
-        {/* </div> */}
+    
     </div>
    
     <div className="write">
@@ -103,7 +101,7 @@ const Write = () => {
       
      
     </div>
-    </>
+    </section>
    
   );
 };

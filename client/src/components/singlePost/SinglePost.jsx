@@ -5,6 +5,7 @@ import { AppContext } from "../../context/context";
 import { Link, useLocation } from "react-router-dom";
 import "./singlepost.scss";
 import ProfileSideBar from "../profileSideBar/ProfileSideBar";
+import { ToastContainer, toast } from 'react-toastify';
 
 const SinglePost = () => {
   const publicFolder = "http://localhost:8000/images/";
@@ -60,6 +61,7 @@ const SinglePost = () => {
       //   data : {username: user.username}
       // });
       window.location.replace("/");
+      toast("post has been deleted")
       
     } catch (error) {
       console.log(error)

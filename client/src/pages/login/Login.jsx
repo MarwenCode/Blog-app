@@ -74,7 +74,7 @@ const Login = () => {
       <label>Password</label>
       <input
         className="loginInput"
-        type="text"
+        type="password"
         placeholder="Enter your password"
         // ref={passwordRef}
         onChange={(e) => setPassword(e.target.value)}

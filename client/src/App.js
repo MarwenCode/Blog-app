@@ -12,14 +12,17 @@ import Write from "./pages/write/Write";
 import SinglePost from "./components/singlePost/SinglePost";
 import Profile from "./pages/profile/Profile";
 import AboutMe from "./pages/AboutMe/AboutMe";
+import {ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function App() {
-  const { user } = useContext(AppContext);
+  const { user,theme } = useContext(AppContext);
 
   return (
     <Router>
-      <div className="container">
+      <div className="container" id={theme}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -31,6 +34,7 @@ function App() {
           <Route path="/aboutme" element={<AboutMe />} />
         </Routes>
       </div>
+      <ToastContainer />
     </Router>
   );
 }

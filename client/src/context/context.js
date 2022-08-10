@@ -33,7 +33,7 @@ export const AppProvider = ({children}) => {
         <AppContext.Provider value={{
             user: state.user,
             isFetching: state.isFetching,
-            error: state.error,toggleTheme,
+            error: state.error,toggleTheme,theme, setTheme,
             dispatch
 
         }}        

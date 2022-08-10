@@ -56,7 +56,7 @@ const Register = () => {
         <label>Password</label>
         <input
           className="registerInput"
-          type="text"
+          type="password"
           placeholder="Enter your password"
           onChange={(e) => setPassword(e.target.value)}
         />

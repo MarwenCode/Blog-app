@@ -1,132 +1,270 @@
-.profile{
-    // display: flex;
-    width:750px;
-    // height:550px;
-    position: absolute;
-    // top: 50%;
-    // left: 50%;
-    margin-top: 10px;
-    margin-left: 500px;
-    // width: 100px;
-    // height: 100px;
-   
-
-    .updateTitle{
-        font-size: 30px;
-        margin-bottom: 20px;
-        color: #0a577e;
-        margin:1px
-    }
-    
-
-    .settingContainer{
-        display:flex;
-        margin: 30px 10px;
+#light .ProfileSection{
+    .profile{
+        // display: flex;
         width:750px;
-        height:300px;
-        flex: 9;
-        padding: 20px;
-        margin-left: 0px;
-        background-color: #e3eaee;
-        border-radius: 20px;
-     
-
-
-        // .settingTitle{
-        //     // display: flex;
-        //     align-items: center;
-        //     justify-content: space-between;
-
+        // height:550px;
+        position: absolute;
+        // top: 50%;
+        // left: 50%;
+        margin-top: 10px;
+        margin-left: 500px;
+        // width: 100px;
+        // height: 100px;
        
-            
-        // }
-
-        .settingForm{
-            display: flex;
-            flex-direction: column;
-            margin-left: 0px;
-
-            label {
-                font-size: 20px;
-                margin-top: 20px;
-              }
-
-            .settingProfilePicutre img{
-                height: 70px;
-                width: 70px;
-                border-radius: 20px;
-                object-fit: cover; 
-
-               
-
-                // .settingsPPIcon{
-                //     width: 25px;
-                //     height: 25px;
-                //     padding: 5px;
-                //     display: flex;
-                //     justify-content: center;
-                //     align-items: center;
-                //     border: none;
-                //     border-radius: 50%;
-                //     margin-left: 10px;
-                //     color: white;
-                //     background-color: lightcoral;
-                //     cursor: pointer; 
-                // }
-
-
-              
-
-
-
-            }
-
-            .settingProfilePicutre{
-                
-
-
-                .fileInput{
-                    width:115px;
-                    cursor: pointer;
-                    background-color: #0a577e;
-                    
-                }
-            }
-
-
-
-
-            .settingInput {
-                flex-direction: column;
-                width: 100%;
-                border: none;
-            }
-
-            .settingInput:focus{
-                outline-style: none;
-            }
-
-            .settingsSubmit{
-                margin: 10px 0px;
-                width: 20%;
-                background-color: #0a577e;
-                color: white;
-                border-radius: 10px;
-                cursor: pointer;
-
-            }
-
-         
-
-         
-
-
-         
-
-
-
-
+    
+        .updateTitle{
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #0a577e;
+            margin:1px
         }
-
+        
+    
+        .settingContainer{
+            display:flex;
+            margin: 30px 10px;
+            width:750px;
+            height:300px;
+            flex: 9;
+            padding: 20px;
+            margin-left: 0px;
+            background-color: #e3eaee;
+            border-radius: 20px;
+         
+    
+    
+            // .settingTitle{
+            //     // display: flex;
+            //     align-items: center;
+            //     justify-content: space-between;
+    
+           
+                
+            // }
+    
+            .settingForm{
+                display: flex;
+                flex-direction: column;
+                margin-left: 0px;
+    
+                label {
+                    font-size: 20px;
+                    margin-top: 20px;
+                  }
+    
+                .settingProfilePicutre img{
+                    height: 70px;
+                    width: 70px;
+                    border-radius: 20px;
+                    object-fit: cover; 
+    
+                   
+    
+    
+    
+                  
+    
+    
+    
+                }
+    
+                .settingProfilePicutre{
+                    
+    
+    
+                    .fileInput{
+                        width:115px;
+                        cursor: pointer;
+                        background-color: #0a577e;
+                        
+                    }
+                }
+    
+    
+    
+    
+                .settingInput {
+                    flex-direction: column;
+                    width: 100%;
+                    border: none;
+                }
+    
+                .settingInput:focus{
+                    outline-style: none;
+                }
+    
+                .settingsSubmit{
+                    margin: 10px 0px;
+                    width: 20%;
+                    background-color: #0a577e;
+                    color: white;
+                    border-radius: 10px;
+                    cursor: pointer;
+    
+                }
+    
+             
+    
+             
+    
+    
+             
+    
+    
+    
+    
+            }
+    
+        }
     }
+
+
+
+
 }
+
+
+#dark .ProfileSection{
+    background-color: dark;
+    width:1000px;
+
+    .profile{
+        display: flex;
+        width:750px;
+    
+        top: 50%;
+        left: 50%;
+       
+        background-color: dark;
+        padding-left: 550px;
+        padding-right: 400px;
+        margin-right: 1000px;
+        
+       
+    
+        .updateTitle{
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #0a577e;
+            margin:1px
+        }
+        
+    
+        .settingContainer{
+            display:flex;
+            margin: 30px 10px;
+            width:750px;
+            height:300px;
+            flex: 9;
+            padding: 20px;
+            margin-left: 0px;
+            background-color: #e3eaee;
+            border-radius: 20px;
+         
+    
+    
+            // .settingTitle{
+            //     // display: flex;
+            //     align-items: center;
+            //     justify-content: space-between;
+    
+           
+                
+            // }
+    
+            .settingForm{
+                display: flex;
+                flex-direction: column;
+                margin-left: 0px;
+    
+                label {
+                    font-size: 20px;
+                    margin-top: 20px;
+                  }
+    
+                .settingProfilePicutre img{
+                    height: 70px;
+                    width: 70px;
+                    border-radius: 20px;
+                    object-fit: cover; 
+    
+                   
+    
+                    // .settingsPPIcon{
+                    //     width: 25px;
+                    //     height: 25px;
+                    //     padding: 5px;
+                    //     display: flex;
+                    //     justify-content: center;
+                    //     align-items: center;
+                    //     border: none;
+                    //     border-radius: 50%;
+                    //     margin-left: 10px;
+                    //     color: white;
+                    //     background-color: lightcoral;
+                    //     cursor: pointer; 
+                    // }
+    
+    
+                  
+    
+    
+    
+                }
+    
+                .settingProfilePicutre{
+                    
+    
+    
+                    .fileInput{
+                        width:115px;
+                        cursor: pointer;
+                        background-color: #0a577e;
+                        
+                    }
+                }
+    
+    
+    
+    
+                .settingInput {
+                    flex-direction: column;
+                    width: 100%;
+                    border: none;
+                }
+    
+                .settingInput:focus{
+                    outline-style: none;
+                }
+    
+                .settingsSubmit{
+                    margin: 10px 0px;
+                    width: 20%;
+                    background-color: #0a577e;
+                    color: white;
+                    border-radius: 10px;
+                    cursor: pointer;
+    
+                }
+    
+             
+    
+             
+    
+    
+             
+    
+    
+    
+    
+            }
+    
+        }
+    }
+
+
+
+
+}
+
+

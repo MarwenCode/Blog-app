@@ -4,10 +4,13 @@ import Header from '../../components/header/Header';
 import Posts from '../../components/posts/Posts';
 import { useLocation } from 'react-router-dom';
 import axios from "axios";
+// import { AppContext } from "../../context/context";
+
 
 
 
 const Home = () => {
+  // const {toggleTheme } = useContext(AppContext);
   const [posts, setPosts] =useState([])
   const {search} = useLocation()
 

@@ -6,7 +6,7 @@ import { AppContext } from "../../context/context";
 import axios from "axios";
 
 const Navbar = () => {
-  const { user, dispatch } = useContext(AppContext);
+  const { user, dispatch,toggleTheme,theme } = useContext(AppContext);
   const publicFolder = "http://localhost:8000/images/";
   const [posts, setPosts] = useState([]);
 
@@ -47,7 +47,8 @@ const Navbar = () => {
       <div className="leftnavbar">
         <div className="siwtchBtn">
           <label className="switch">
-            <input type="checkbox" />
+            <input type="checkbox" onChange={toggleTheme}/>
+            {/* <input type="checkbox" onChange={toggleTheme} checked={theme === "light"}/> */}
              <span className="slider"></span>
 
           </label>
@@ -121,10 +122,10 @@ const Navbar = () => {
         ) : (
           <>
             <Link to="login" className="link">
-              <span className="signItem">Login</span>
+              <span className="signItemLogin">Login</span>
             </Link>
             <Link to="register" className="link">
-              <span className="signItem">Register</span>
+              <span className="signItemRegister">Register</span>
             </Link>
           </>
         )}
