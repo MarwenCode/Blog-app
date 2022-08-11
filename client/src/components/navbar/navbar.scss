@@ -5,8 +5,23 @@
     background-color: #0a577e;
     // border-radius: 15px;
 
+
+    @media screen and(max-width: 850px) {
+    
+        background-color: #4595e0;
+
+
+      
+    
+      }
+
+
+    
+
+
     .leftnavbar{
         flex : 6;
+      
         
         display: flex;
         justify-content: center;
@@ -113,6 +128,29 @@
             }
            
         }
+
+        @media screen and(max-width: 850px) {
+            background-color: #45e04d;
+       
+          
+
+            .list{
+
+                background-color: #4595e0;
+                margin: 1px;
+                font-size:small;
+                display: block;
+                z-index: 1;
+             
+
+
+                .item{
+              
+
+                }
+            }
+        
+          }
         
         
     }
@@ -121,6 +159,10 @@
         z-index: 1;
         display: flex;
         position: relative;
+
+        @media screen and(max-width: 850px){
+            width:100px
+        }
         
         
 
@@ -200,6 +242,10 @@
                 input {
                   margin-left: 10px;
                 }
+
+                @media screen and(max-width: 850px) {
+                    width:90px
+                }
                
                
               
@@ -220,8 +266,12 @@
              
                 
             }
+
+         
     
-           }
+        }
+
+ 
 
     }
 
@@ -292,8 +342,13 @@
             cursor: pointer;
             margin: -9px 20px
           }
+
+      
+   
         
     }
+
+
 
 
     .logout{

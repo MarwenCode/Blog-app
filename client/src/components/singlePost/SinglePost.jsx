@@ -51,23 +51,39 @@ const SinglePost = () => {
 
   console.log(handleUpdate)
 
+  // const handleDelete = async() => {
+  //   try {
+
+  //     await axios.delete(`/post/${post._id}`);
+
+  //     // or we can do also 
+  //     //  await axios.delete(`/posts/${post._id}`, {
+  //     //   data : {username: user.username}
+  //     // });
+  //     window.location.replace("/");
+  //     toast("post has been deleted")
+      
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+
+  // }
+
   const handleDelete = async() => {
     try {
 
-      await axios.delete(`/post/${post._id}`);
-
-      // or we can do also 
-      //  await axios.delete(`/posts/${post._id}`, {
-      //   data : {username: user.username}
-      // });
+      await axios.delete(`/post/${post._id}`, {
+        data : {username: user.username}
+      });
       window.location.replace("/");
-      toast("post has been deleted")
       
     } catch (error) {
       console.log(error)
     }
 
   }
+
+
 
 
 

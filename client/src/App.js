@@ -26,9 +26,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/register" element={user ? <Login /> : <Register />} />
           <Route path="/login" element={user ? <Home /> : <Login />} />
-          <Route path="/write" element={<Write />} />
+          <Route path="/write" element={user ? <Write /> : <Register />} />
           <Route path="/post/:postId" element={<SinglePost />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/aboutme" element={<AboutMe />} />
