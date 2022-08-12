@@ -4,17 +4,21 @@ import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../context/context";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { user, dispatch,toggleTheme,theme } = useContext(AppContext);
   const publicFolder = "http://localhost:8000/images/";
   const [posts, setPosts] = useState([]);
+  const Navigate = useNavigate()
 
   const [searchTerm, setSearchTerm] = useState("");
   const [searchActive, setSearchActive] = useState(false);
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
+    // window.location.replace("/login")
+    Navigate("/login")
   };
 
   useEffect(() => {

@@ -1,5 +1,10 @@
 .header {
     margin-top: 5px;
+    @media screen and(min-width: 400px)and(max-width: 1000px){
+      font-size:x-small;
+      width:100%;
+  }
+    
 
     .headerTitles {
         display: flex;
@@ -7,19 +12,33 @@
         align-items: center;
         font-family: "Lora", serif;
         color: #444;
-
+     
 
         .headerTitleSm {
             position: absolute;
             top: 18%;
             font-size: 20px;
             color: #444;
+            @media screen and(min-width: 400px)and(max-width: 1000px){
+              font-size:small;
+              width:100%;
+              justify-content: center;
+              text-align: center;
+          }
+    
           }
           
           .headerTitleLg {
             position: absolute;
             top: 20%;
             font-size: 100px;
+
+            @media screen and(min-width: 400px)and(max-width: 1000px){
+              font-size:large;
+              width:100%;
+              justify-content: center;
+              text-align: center;
+          }
            
           }
       }
@@ -33,6 +52,11 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
+
+
+        @media screen and(min-width: 400px)and(max-width: 1000px){
+          width:100%
+      }
       }
 
 

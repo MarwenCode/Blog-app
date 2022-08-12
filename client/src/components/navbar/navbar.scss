@@ -6,9 +6,10 @@
     // border-radius: 15px;
 
 
-    @media screen and(max-width: 850px) {
+    @media screen and(min-width: 400px)and(max-width: 1000px) {
     
-        background-color: #4595e0;
+        background-color: #0a577e;
+        width: 950px;
 
 
       
@@ -30,14 +31,28 @@
 
         .siwtchBtn{
             width: 70px;
+            @media screen and(min-width: 400px)and(max-width: 1000px) {
+                width: 5px;
+            }
 
             .switch{
                 position:relative;
                 display: inline-block;
                 height: 40px;
 
+                @media screen and(min-width: 400px)and(max-width: 1000px) {
+                    width: 5px;
+                    height: 10px;
+                }
+
+             
+
                 input{
                     margin-right: -20px;
+
+                    @media screen and(min-width: 400px)and(max-width: 1000px) {
+                        width: 5px;
+                    }
                 }
 
 
@@ -50,6 +65,11 @@
                     transform: .4s;
                     border-radius: 30px;
                     width: 65px;
+
+                    @media screen and(min-width: 400px)and(max-width: 1000px) {
+                        width: 45px;
+                        
+                    }
 
                 }
                 .slider:before {
@@ -129,14 +149,14 @@
            
         }
 
-        @media screen and(max-width: 850px) {
-            background-color: #45e04d;
+        @media screen and(min-width: 400px)and(max-width: 1000px){
+            // background-color: #45e04d;
        
           
 
             .list{
 
-                background-color: #4595e0;
+                // background-color: #4595e0;
                 margin: 1px;
                 font-size:small;
                 display: block;
@@ -145,6 +165,9 @@
 
 
                 .item{
+                    margin-top: 0;
+                    margin-left: 3px;
+                    justify-content: center;
               
 
                 }
@@ -160,8 +183,9 @@
         display: flex;
         position: relative;
 
-        @media screen and(max-width: 850px){
-            width:100px
+        @media screen and(min-width: 400px)and(max-width: 1000px){
+            width:100px;
+            background-color: #0a577e;
         }
         
         
@@ -243,7 +267,7 @@
                   margin-left: 10px;
                 }
 
-                @media screen and(max-width: 850px) {
+                @media screen and(min-width: 400px)and(max-width: 1000px) {
                     width:90px
                 }
                
@@ -262,6 +286,12 @@
                 margin-left: 350px;
                 float: right;
                 // width: 600px;
+
+                @media screen and(min-width: 400px)and(max-width: 1000px){
+                    width:20px;
+                    // background-color: #0a577e;
+                    margin: 5px;
+                }
                
              
                 
@@ -288,6 +318,12 @@
         font-size: larger;
         display: flex;
         margin-top: 10px;
+
+        @media screen and(min-width: 400px)and(max-width: 1000px) {
+            font-size: small;
+        }
+
+       
       
 
         .signItemLogin{
@@ -340,8 +376,15 @@
             object-fit: cover;
             margin-right: 15px;
             cursor: pointer;
-            margin: -9px 20px
+            margin: -9px 20px;
+
+
+            @media screen and(min-width: 400px)and(max-width: 1000px){
+                width:2100%;
+            }
           }
+
+
 
       
    
@@ -355,6 +398,12 @@
         justify-content: center;
         // align-items: center;
         cursor: pointer;
+
+
+        @media screen and(min-width: 400px)and(max-width: 1000px){
+            font-size: small;
+            width: 100%;
+        }
 
     }
 }

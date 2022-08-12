@@ -3,33 +3,79 @@
     // height:100%;
     width:100%;
 
+  
+
     .leftSection {
         // background-color: aqua;
-        flex:3
+        flex:3;
+
+        @media screen and(min-width: 400px)and(max-width: 1000px){
+            width: 90px;
+            margin-left: 200px;
+  
+        }
+
+        
 
     }
 
     .bloc{
         // background-color: rgb(103, 209, 100);
         flex: 7;
+
+    
+
+
+      
        
 
         .singlePost{
-            width:450px;
+           
             // height: 50%;
             border-bottom: 1px solid grey;
             margin-top: 0px;
-            
+            width: 100%;
+         
+
+         
+
+        
 
 
             .singlePostWrapper{
                 width: 100%;
                 height: 100%;
                 margin-top: 0px;
+
+                @media screen and(min-width: 400px)and(max-width: 1200px){
+                    width: 40%;
+                    height: 350px;
+                    // margin-left: 100px;
+                    background-color: rgb(119, 202, 111);
+                   
+          
+                }
+
+                
+
+              
+             
+                
                
                 .singlePostImg {
-                    width: 650px;
+                    width: 90%;
                     height: 150px;
+
+                    @media screen and(min-width: 400px)and(max-width: 1200px){
+                        width: 350px;
+                        height: 350px;
+                        // margin-left: 100px;
+                        background-color: rgb(119, 202, 111);
+                       
+              
+                    }
+
+                
 
                 }
 
@@ -42,7 +88,7 @@
                .singlePostEdit{
                 // display: inline-block;
                 display: flex;
-                width: 100%;
+                width: 80%;
             
 
                 .singlePostIconEdit{
@@ -93,12 +139,24 @@
         width:500px;
 
 
+        @media screen and(min-width: 400px)and(max-width: 1000px){
+            width: 150px;
+            height: 50px;
+            margin-right: 0;
+           
+  
+        }
+
+
     }
     .carouselInner{
         display: flex;
         width:50%;
         height: 250px;
-        margin:20px 0px
+        margin:20px 0px;
+
+        
+     
       
     }
 
@@ -108,6 +166,13 @@
         width: 400px;
         height: 250px;
         margin:1px 15px;
+
+        @media screen and(min-width: 400px)and(max-width: 1000px){
+            width: 350px;
+            height: 350px;
+           
+  
+        }
     }
     .arrow{
         display: inline-block;

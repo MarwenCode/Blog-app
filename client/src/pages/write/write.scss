@@ -4,6 +4,15 @@
   // height:150vh;
   // background-color:black;
 
+  @media screen and(min-width: 400px)and(max-width: 1200px){
+     transition: 50% 50%;
+     margin-top: 100px;
+     width:650px;
+     position:auto;
+   
+
+}
+
 
   .profilebar{
     margin-left:-475px;
@@ -69,7 +78,7 @@
           font-size: 30px;
           // border:none;
           // padding: 20px;
-          width: 35%;
+          width: 100%;
           border-radius: 15px;
           outline: none;
           margin-right: 400px;

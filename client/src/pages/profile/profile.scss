@@ -1,4 +1,10 @@
 #light .ProfileSection{
+  
+
+    
+ 
+    
+
     .profile{
         // display: flex;
         width:750px;
@@ -10,6 +16,18 @@
         margin-left: 500px;
         // width: 100px;
         // height: 100px;
+        @media screen and(min-width: 400px)and(max-width: 1000px){
+            // transition: 50% 50%;
+            margin-top: 100px;
+            width:100%;
+            position: absolute;
+            margin-right: 300px;
+         
+          
+          
+        
+        }
+
        
     
         .updateTitle{

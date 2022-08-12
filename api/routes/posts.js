@@ -59,7 +59,7 @@ postRoute.put("/:id", async (req, res) => {
 postRoute.delete("/:id", async (req, res) => {
     try {
         const post = await Post.findById(req.params.id)
-        if(post.username === req.params.id){
+        if(post.username === req.body.username){
             try {
                 await post.delete();
                 res.status(200).json("post has been deleted...")
