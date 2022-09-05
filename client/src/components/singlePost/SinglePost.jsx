@@ -84,11 +84,6 @@ const SinglePost = () => {
   }
 
 
-
-
-
-
-
   return (
     <div className="singlePost">
       <ProfileSideBar />
