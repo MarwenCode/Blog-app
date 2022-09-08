@@ -51,7 +51,7 @@ app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
 app.use("/api/post", postRoute);
 
-app.listen(process.env.PORT || 8000, () => {
+app.listen(process.env.PORT, () => {
   connect();
   console.log("connected to backend");
 }); 
