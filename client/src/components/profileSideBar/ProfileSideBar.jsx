@@ -19,6 +19,7 @@ const ProfileSideBar = () => {
   const { user } = useContext(AppContext);
   const publicFolder = "http://localhost:8000/images/";
 
+
   const [expression, setExpression] = useState("");
   const [inputGroup, setInputGroup] = useState(getlocalStorage());
   const [updateMode, setUpdateMode] = useState(false);
@@ -76,7 +77,8 @@ const ProfileSideBar = () => {
   return (
     <div className="ProfileSideBar">
       <div className="profileUp">
-        <img className="profilepic" src={publicFolder + user.profilePic} />
+        {/* <img className="profilepic" src={publicFolder + user.profilePic} /> */}
+        <img className="profilepic" src="/images/image1.jpg"/>
         <span className="name">{user?.username}</span>
       </div>
      

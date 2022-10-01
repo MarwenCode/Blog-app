@@ -5,6 +5,7 @@
     background-color: #0a577e;
     // border-radius: 15px;
     align-items: center;
+    width: 100%;
 
 
     @media screen and(min-width: 400px)and(max-width: 1000px) {
@@ -22,7 +23,7 @@
 
 
     .leftnavbar{
-        flex : 6;
+        flex : 3;
       
         
         display: flex;
@@ -119,7 +120,7 @@
 
             .item{
                 justify-content: baseline;
-                margin: 25px;
+                margin: 30px;
                 cursor: pointer;
                 position: relative;
                 width: 100%;
@@ -320,6 +321,8 @@
         font-size: larger;
         display: flex;
         margin-top: 10px;
+        align-items: center;
+        margin-left: 5px;
 
         @media screen and(min-width: 400px)and(max-width: 1000px) {
             font-size: small;

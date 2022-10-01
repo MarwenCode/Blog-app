@@ -41,5 +41,11 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://blog-app-brxv.onrender.com/api"
+  "proxy":"https://blog-app-api.onrender.com/api"
+ 
+  
+
+
 }
+
+

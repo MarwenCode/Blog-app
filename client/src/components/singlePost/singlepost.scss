@@ -1,16 +1,28 @@
 .singlePost{
+    // overflow: hidden;
   
- 
-    // width:100%;
 
 
     .singlePostWrapper{
         padding: 50px 50px;
-        width: 100%;
+        width: 90%;
         // background-color: aqua;
         height: 200px;
         justify-content: center;
         margin-left: 50px;
+
+        .singlePostTitleInput{
+            // text-align: center;
+            // margin-top: 30px;
+            font-size: 28px;
+            font-family: "Lora", sans-serif;
+           border: none;
+           width: 30%;
+            border-bottom: 1px solid lightgrey;
+        }
+        .singlePostTitleInput:focus{
+            outline:none;
+          }
 
 
         .singlePostImg{
@@ -20,28 +32,64 @@
             object-fit: cover;
         }
 
-        .singlePostTitleInput{
-            text-align: center;
-            margin: 10px;
-            font-size: 28px;
-            font-family: "Lora", sans-serif;
-           border: none;
-            border-bottom: 1px solid lightgrey;
+
+        .top {
+            display: flex;
+            width: 40%;
+      
+
+            
+      
+
+          .singlePostEdit{
+            display: inline-flex;
+            margin-left: 300px;
+        
+            .singlePostIconEdit{
+                margin-left:50px;
+                cursor: pointer;
+            }
+
+            .singlePostIconDelete{
+                margin-left:50px;
+                cursor: pointer;
+            }
+
+
+
+           
+         }
+
+
+
+
+
         }
-        .singlePostTitleInput:focus{
-            outline:none;
-          }
+
+
+
+
+
 
         .singlePostDescInput{
-            width: 70%;
-            border:none;
-            margin:10px;
+            // border:none;
+            margin-top:30px;
             font-size: 20px;
             font-family: "Lora", sans-serif;
+           
+
+            resize: none;
+            width: 80%;
+            // border-radius: 5px;
+            overflow: hidden;
+            min-height: 20vh;
+            // max-height: 250px;
+            text-align: start;
         }
 
         .singlePostDescInput:focus {
             outline: none;
+
         }
 
         .signlePostButton{
@@ -52,6 +100,7 @@
             transition-duration: 0.4s;
             border-radius: 8px;
             height: 28px;
+            margin-right: 550px;
             cursor: pointer;
          }
          .signlePostButton:hover{
@@ -60,24 +109,7 @@
           
          }
 
-         .singlePostEdit{
-            display: inline;
-            margin: 10px;
-
-            .singlePostIconEdit{
-                margin-left:50px;
-                cursor: pointer;
-            }
-
-            .singlePostIconDelete{
-                margin-left:750px;
-                cursor: pointer;
-            }
-
-
-
-           
-         }
+       
 
         
 

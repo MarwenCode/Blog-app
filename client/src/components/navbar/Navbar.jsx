@@ -7,10 +7,10 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const { user, dispatch,toggleTheme,theme } = useContext(AppContext);
+  const { user, dispatch, toggleTheme, theme } = useContext(AppContext);
   const publicFolder = "http://localhost:8000/images/";
   const [posts, setPosts] = useState([]);
-  const Navigate = useNavigate()
+  const Navigate = useNavigate();
 
   const [searchTerm, setSearchTerm] = useState("");
   const [searchActive, setSearchActive] = useState(false);
@@ -18,12 +18,13 @@ const Navbar = () => {
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
     // window.location.replace("/login")
-    Navigate("/login")
+    Navigate("/login");
   };
 
   useEffect(() => {
     const fetchPosts = async () => {
       const res = await axios.get("/post");
+      // const res = await axios.get("https://blog-app-api.onrender.com/api/post");
       console.log(res);
       setPosts(res.data);
     };
@@ -51,26 +52,35 @@ const Navbar = () => {
       <div className="leftnavbar">
         <div className="siwtchBtn">
           <label className="switch">
-            <input type="checkbox" onChange={toggleTheme}/>
+            <input type="checkbox" onChange={toggleTheme} />
             {/* <input type="checkbox" onChange={toggleTheme} checked={theme === "light"}/> */}
-             <span className="slider"></span>
-
+            <span className="slider"></span>
           </label>
         </div>
         <ul className="list">
-          <Link to="/aboutme" className="link">
-            <li className="item">About Me & My Blogs</li>
-          </Link>
+          {user ? (
+            <>
+              <Link to="/aboutme" className="link">
+                <li className="item">My Blogs</li>
+              </Link>
 
-          <Link to="/" className="link">
-            <li className="item">Home</li>
-          </Link>
-          <Link to="write" className="link">
-            <li className="item">Write</li>
-          </Link>
-          <Link to="profile" className="link">
-            <li className="item">Profile</li>
-          </Link>
+              <Link to="/" className="link">
+                <li className="item">Home</li>
+              </Link>
+              <Link to="write" className="link">
+                <li className="item">Write</li>
+              </Link>
+              <Link to="profile" className="link">
+                <li className="item">Profile</li>
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link to="/" className="link">
+                <li className="item">Home</li>
+              </Link>
+            </>
+          )}
         </ul>
       </div>
       <div className="SearchSection">
@@ -79,7 +89,7 @@ const Navbar = () => {
             {posts
               .filter((post) => {
                 if (searchTerm == "") {
-                  return post;
+                  return;
                 } else if (
                   post.title.toLowerCase().includes(searchTerm.toLowerCase())
                 ) {
@@ -100,6 +110,7 @@ const Navbar = () => {
                   </div>
                 );
               })}
+              
           </div>
         )}
 
@@ -121,7 +132,8 @@ const Navbar = () => {
             <span className="logout" onClick={handleLogout}>
               Logout
             </span>
-            <img className="topImg" src={publicFolder + user.profilePic} />
+            {/* <img className="topImg" src={publicFolder + user.profilePic} /> */}
+            <img className="topImg" src="/images/image1.jpg" />
           </>
         ) : (
           <>
@@ -139,3 +151,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

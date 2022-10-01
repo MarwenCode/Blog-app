@@ -7,7 +7,8 @@ const Post = ({post}) => {
   return (
     <div className="post">
       {post.photo && (
-        <img className="postImg" src={publicForlder + post.photo} alt="" />
+        // <img className="postImg" src={ publicForlder + post.photo} alt="" />
+        <img className="postImg" src="/images/image3.jpeg" alt="" />
       )}
       <div className="postInfo">
         <Link to={`/post/${post._id}`} className="link">

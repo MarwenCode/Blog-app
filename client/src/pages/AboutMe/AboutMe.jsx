@@ -24,6 +24,7 @@ const AboutMe = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       const res = await axios.get(`/post/myposts/${user._id}`);
+      // const res = await axios.get(`https://blog-app-api.onrender.com/api/post/myposts/${user._id}`);
       console.log(res);
       setPosts(res.data);
     };
@@ -63,7 +64,8 @@ const AboutMe = () => {
           <>
             <div className="singlePost">
               <div className="singlePostWrapper">
-                <img className="singlePostImg" src={publicForlder + post.photo}  alt="" />
+                {/* <img className="singlePostImg" src={publicForlder + post.photo}  alt="" /> */}
+                <img className="singlePostImg" src="/images/image3.jpeg" alt="" />
               
 
                 <div className="singlePostEdit">

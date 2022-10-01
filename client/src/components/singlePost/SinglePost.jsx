@@ -25,6 +25,7 @@ const SinglePost = () => {
   useEffect(() => {
     const getPost = async () => {
       const res = await axios.get("/post/" + path);
+      // const res = await axios.get("https://blog-app-api.onrender.com/api/post/" + path);
       console.log(res.data);
       setPost(res.data);
       setTitle(res.data.title);
@@ -86,9 +87,10 @@ const SinglePost = () => {
 
   return (
     <div className="singlePost">
-      <ProfileSideBar />
+      <ProfileSideBar  className="sideBar"/>
       <div className="singlePostWrapper">
-        <img className="singlePostImg" src={publicFolder + post.photo} alt="" />
+        {/* <img className="singlePostImg" src={publicFolder + post.photo} alt="" /> */}
+        <img className="singlePostImg" src="/images/image3.jpeg" alt="" />
         {updateMode ? (
           <input
             className="singlePostTitleInput"
@@ -97,23 +99,31 @@ const SinglePost = () => {
             onChange={(e) => setTitle(e.target.value)}
           />
         ) : (
-          <h1 className="singlePostTitle">
+          <div className="top">
+              <h1 className="singlePostTitle">
             {title}
+            </h1>
+
+          
             <div className="singlePostEdit">
               <i
                 className="singlePostIconEdit far fa-edit"
                 onClick={() => setUpdateMode(true)}></i>
               <i className="singlePostIconDelete far fa-trash-alt"  onClick={handleDelete}></i>
             </div>
-          </h1>
+          
+          
+          </div>
+        
+          
         )}
 
         <div className="singlePostInfo">
           <span>
             Author: {post.username}
             <b className="singlePostAuthor"></b>
+          
           </span>
-          <span></span>
         </div>
 
         {updateMode ? (

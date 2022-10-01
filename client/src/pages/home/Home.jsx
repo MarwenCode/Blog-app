@@ -19,6 +19,7 @@ const Home = () => {
   useEffect(() => {
       const fetchPosts = async() => {
           const res = await axios.get("/post")
+          // const res = await axios.get("https://blog-app-api.onrender.com/api/post")
           console.log(res)
           setPosts(res.data)
           
@@ -29,7 +30,7 @@ const Home = () => {
 
   return (
     <div className='home'>
-        <Header />
+  
         <Posts  posts={posts}/>
         
     </div>
