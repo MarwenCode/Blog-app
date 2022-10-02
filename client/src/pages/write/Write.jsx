@@ -28,15 +28,16 @@ const Write = () => {
           data.append("file", file);
           newPost.photo = filename;
           try {
-            await axios.post("/upload", data);
-            // await axios.post("https://blog-app-api.onrender.com/api/upload", data);
+            // await axios.post("/upload", data);
+            await axios.post("https://blog-app-api.onrender.com/api/upload", data);
           } catch (err) {}
         }
         try {
-          const res = await axios.post("/post", newPost);
-          // const res = await axios.post("https://blog-app-api.onrender.com/api/post", newPost);
+          // const res = await axios.post("/post", newPost);
+          const res = await axios.post("https://blog-app-api.onrender.com/api/post", newPost);
           console.log(res.data)
-        //   window.location.replace("/post/" + res.data._id);
+          // window.location.replace("/post/" + res.data._id);
+          window.location.replace("https://blog-app-api.onrender.com/api/post/" + res.data._id);
           window.location.replace("/");
         } catch (err) {}
       };

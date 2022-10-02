@@ -27,14 +27,14 @@ const Profile = () => {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axios.post("/upload", data);
-        // await axios.post("https://blog-app-api.onrender.com/api/upload", data);
+        // await axios.post("/upload", data);
+        await axios.post("https://blog-app-api.onrender.com/api/upload", data);
       } catch (err) {}
     }
 
     try {
-      const res = await axios.put("/post/user/" + user._id, updatedUser);
-      // const res = await axios.put("https://blog-app-api.onrender.com/api/post/user/" + user._id, updatedUser);
+      // const res = await axios.put("/post/user/" + user._id, updatedUser);
+      const res = await axios.put("https://blog-app-api.onrender.com/api/post/user/" + user._id, updatedUser);
 
       console.log(res);
       setSuccessMessage(true);

@@ -23,8 +23,8 @@ const AboutMe = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get(`/post/myposts/${user._id}`);
-      // const res = await axios.get(`https://blog-app-api.onrender.com/api/post/myposts/${user._id}`);
+      // const res = await axios.get(`/post/myposts/${user._id}`);
+      const res = await axios.get(`https://blog-app-api.onrender.com/api/post/myposts/${user._id}`);
       console.log(res);
       setPosts(res.data);
     };

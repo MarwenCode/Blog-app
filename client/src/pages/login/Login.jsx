@@ -40,7 +40,8 @@ const Login = () => {
     e.preventDefault()
       dispatch({type:"LOGIN_START"})
       try {
-        const res = await axios.post("auth/login",{
+        // const res = await axios.post("auth/login",{
+        const res = await axios.post("https://blog-app-api.onrender.com/api/auth/login",{
           email,
           password
   
