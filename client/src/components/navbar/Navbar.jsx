@@ -4,11 +4,13 @@ import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../context/context";
 import axios from "axios";
+import {axiosInstance} from "../../config";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { user, dispatch, toggleTheme, theme } = useContext(AppContext);
-  const publicFolder = "http://localhost:8000/images/";
+  const publicFolder = "https://blog-app-frontend.onrender.com/images/";
+  // const publicFolder = "http://localhost:8000/images/";
   const [posts, setPosts] = useState([]);
   const Navigate = useNavigate();
 
@@ -23,8 +25,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      // const res = await axios.get("/post");
-      const res = await axios.get("https://blog-app-api.onrender.com/api/post");
+      const res = await axios.get("/post");
+      // const res = await axios.get("https://blog-app-api.onrender.com/api/post");
     
       console.log(res);
       setPosts(res.data);

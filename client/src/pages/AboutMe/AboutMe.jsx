@@ -1,4 +1,5 @@
 import axios from "axios";
+import {axiosInstance} from "../../config";
 import React, { useState, useEffect,useContext} from "react";
 import ProfileSideBar from "../../components/profileSideBar/ProfileSideBar";
 import "./aboutme.scss";
@@ -15,7 +16,8 @@ import { Link } from "react-router-dom";
 
 const AboutMe = () => {
   const {user} = useContext(AppContext)
-  const publicForlder = "http://localhost:8000/images/";
+  // const publicForlder = "http://localhost:8000/images/";
+  const publicFolder = "https://blog-app-frontend.onrender.com/images/";
   const [posts, setPosts] = useState([]);
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -23,8 +25,8 @@ const AboutMe = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      // const res = await axios.get(`/post/myposts/${user._id}`);
-      const res = await axios.get(`https://blog-app-api.onrender.com/api/post/myposts/${user._id}`);
+      const res = await axios.get(`/post/myposts/${user._id}`);
+      // const res = await axios.get(`https://blog-app-api.onrender.com/api/post/myposts/${user._id}`);
       console.log(res);
       setPosts(res.data);
     };

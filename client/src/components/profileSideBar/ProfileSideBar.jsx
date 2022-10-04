@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./profilesidebar.scss";
 import axios from "axios";
+import {axiosInstance} from "../../config";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
 
@@ -17,7 +18,8 @@ const getlocalStorage = () => {
 
 const ProfileSideBar = () => {
   const { user } = useContext(AppContext);
-  const publicFolder = "http://localhost:8000/images/";
+  const publicFolder = "https://blog-app-frontend.onrender.com/images/";
+  // const publicFolder = "http://localhost:8000/images/";
 
 
   const [expression, setExpression] = useState("");

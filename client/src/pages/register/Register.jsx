@@ -2,6 +2,7 @@ import React,{useState, useEffect, useContext}  from 'react';
 import "./register.scss";
 import axios from 'axios';
 import { AppContext } from '../../context/context';
+import { axiosInstance } from '../../config';
 
 const Register = () => {
   const {dispatch } = useContext(AppContext)
@@ -15,8 +16,8 @@ const Register = () => {
     e.preventDefault()
     dispatch({type:"LOGIN_START"})
     try {
-      // const res = await axios.post("/auth/register", {
-        const res = await axios.post("https://blog-app-api.onrender.com/api/auth/register", {
+      const res = await axios.post("/auth/register", {
+        // const res = await axios.post("https://blog-app-api.onrender.com/api/auth/register", {
         username,
         email,
         password,

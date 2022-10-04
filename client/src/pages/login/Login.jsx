@@ -2,6 +2,7 @@ import React,{useContext, useState, useRef} from 'react';
 import "./login.scss";
 import { Link } from 'react-router-dom';
 import { AppContext } from '../../context/context';
+import { axiosInstance } from '../../config';
 import axios from 'axios'
 
 
@@ -40,8 +41,8 @@ const Login = () => {
     e.preventDefault()
       dispatch({type:"LOGIN_START"})
       try {
-        // const res = await axios.post("auth/login",{
-        const res = await axios.post("https://blog-app-api.onrender.com/api/auth/login",{
+        const res = await axios.post("auth/login",{
+        // const res = await axios.post("https://blog-app-api.onrender.com/api/auth/login",{
           email,
           password
   

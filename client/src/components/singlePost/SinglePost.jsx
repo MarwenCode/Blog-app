@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import {axiosInstance} from "../../config";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
 import { Link, useLocation } from "react-router-dom";
@@ -8,7 +9,8 @@ import ProfileSideBar from "../profileSideBar/ProfileSideBar";
 import { ToastContainer, toast } from 'react-toastify';
 
 const SinglePost = () => {
-  const publicFolder = "http://localhost:8000/images/";
+  // const publicFolder = "http://localhost:8000/images/";
+  const publicFolder = "https://blog-app-frontend.onrender.com/images/";
   const { user } = useContext(AppContext);
 
   const [title, setTitle] = useState("");
@@ -24,8 +26,8 @@ const SinglePost = () => {
 
   useEffect(() => {
     const getPost = async () => {
-      // const res = await axios.get("/post/" + path);
-      const res = await axios.get("https://blog-app-api.onrender.com/api/post/" + path);
+      const res = await axios.get("/post/" + path);
+      // const res = await axios.get("https://blog-app-api.onrender.com/api/post/" + path);
       console.log(res.data);
       setPost(res.data);
       setTitle(res.data.title);
