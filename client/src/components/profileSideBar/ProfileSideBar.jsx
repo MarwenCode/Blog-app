@@ -17,7 +17,8 @@ const getlocalStorage = () => {
 
 const ProfileSideBar = () => {
   const { user } = useContext(AppContext);
-  const publicFolder = "http://localhost:8000/images/";
+  // const publicFolder = "http://localhost:8000/images/";
+  const publicFolder = "https://blog-app-api.onrender.com/images/";
 
   const [expression, setExpression] = useState("");
   const [inputGroup, setInputGroup] = useState(getlocalStorage());

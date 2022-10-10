@@ -1,0 +1,13 @@
+https://blog-app-api.onrender.com/api/post
+https://blog-app-frontend.onrender.com/images
+https://blog-app-api.onrender.com/api/post/ + path
+https://blog-app-api.onrender.com/api/post/${post._id}
+https://blog-app-api.onrender.com/api/post/myposts/${user._id}
+https://blog-app-api.onrender.com/api/auth/login
+https://blog-app-api.onrender.com/api/upload
+https://blog-app-api.onrender.com/api/auth/register
+https://blog-app-api.onrender.com/api/post
+
+
+
+

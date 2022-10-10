@@ -8,7 +8,8 @@ import ProfileSideBar from "../profileSideBar/ProfileSideBar";
 import { ToastContainer, toast } from 'react-toastify';
 
 const SinglePost = () => {
-  const publicFolder = "http://localhost:8000/images/";
+  // const publicFolder = "http://localhost:8000/images/";
+  const publicFolder = "https://blog-app-api.onrender.com/images/";
   const { user } = useContext(AppContext);
 
   const [title, setTitle] = useState("");
@@ -24,7 +25,8 @@ const SinglePost = () => {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("/post/" + path);
+      // const res = await axios.get("/post/" + path);
+      const res = await axios.get("https://blog-app-api.onrender.com/api/post/" + path);
       console.log(res.data);
       setPost(res.data);
       setTitle(res.data.title);
@@ -37,7 +39,8 @@ const SinglePost = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/post/${post._id}`, {
+      // await axios.put(`/post/${post._id}`, {
+      await axios.put(`https://blog-app-api.onrender.com/api/post/${post._id}`, {
         username: user.username,
         title,
         description,
@@ -73,6 +76,7 @@ const SinglePost = () => {
     try {
 
       await axios.delete(`/post/${post._id}`, {
+      // await axios.delete(`https://blog-app-api.onrender.com/api/post/${post._id}`, {
         data : {username: user.username}
       });
       window.location.replace("/");
@@ -113,7 +117,6 @@ const SinglePost = () => {
             Author: {post.username}
             <b className="singlePostAuthor"></b>
           </span>
-          <span></span>
         </div>
 
         {updateMode ? (
@@ -129,9 +132,13 @@ const SinglePost = () => {
         )}
         {/* <p className="singlePostDesc">{post.description}</p> */}
         {updateMode && (
-          <button className="signlePostButton" onClick={handleUpdate}>
+          <div className="btn">
+              <button className="signlePostButton" onClick={handleUpdate}>
             Update
           </button>
+
+          </div>
+        
         )}
       </div>
     </div>
@@ -139,3 +146,4 @@ const SinglePost = () => {
 };
 
 export default SinglePost;
+

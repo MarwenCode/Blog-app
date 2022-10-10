@@ -5,6 +5,7 @@
     background-color: #0a577e;
     // border-radius: 15px;
     align-items: center;
+   
 
 
     @media screen and(min-width: 400px)and(max-width: 1000px) {
@@ -114,7 +115,7 @@
             list-style-type: none;
             display: flex;
             align-items:center;
-            margin-left: 350px;
+            margin-left: 50px;
             font-size: larger;
 
             .item{
@@ -159,10 +160,11 @@
             .list{
 
                 // background-color: #4595e0;
-                margin: 1px;
+                // margin: 1px;
                 font-size:small;
                 display: block;
                 z-index: 1;
+            
              
 
 
@@ -170,6 +172,7 @@
                     margin-top: 0;
                     margin-left: 3px;
                     justify-content: center;
+                   
               
 
                 }
@@ -184,6 +187,7 @@
         z-index: 1;
         display: flex;
         position: relative;
+       
 
         @media screen and(min-width: 400px)and(max-width: 1000px){
             width:100px;
@@ -257,6 +261,7 @@
         .FasearchInput{
             // margin-bottom: 250px;
             margin-top: 5px;
+            margin-right: 150px;
     
     
             .inputSearch{
@@ -320,6 +325,9 @@
         font-size: larger;
         display: flex;
         margin-top: 10px;
+        margin-right: 150px;
+     
+     
 
         @media screen and(min-width: 400px)and(max-width: 1000px) {
             font-size: small;
@@ -332,17 +340,55 @@
             justify-content: center;
             // align-items: center;
             cursor: pointer;
-           
+            margin-right: 25px;
+            // justify-content: baseline;
+      
+            cursor: pointer;
+            position: relative;
+            width: 100%;
+            justify-content: center;
        
 
         } 
+        .signItemLogin::before{
+            content:"";
+            position: absolute;
+            background-color: rgb(24, 124, 206);
+            // border-bottom: 2px solid black;
+            width:0;
+            height: 3px;
+            bottom: -10px;
+            justify-content: center;
+            left: 0;
+            transition: 0.5 ease;
+       
+
+        } 
+        .signItemLogin:hover:before{
+            width: 100%;
+            justify-content: center;
+        }
+
         .signItemRegister{
+            // justify-content: center;
+            // // align-items: center;
+            // cursor: pointer;
+            // margin-left: 6px;
+           
+            // // justify-content: baseline;
+            // margin-bottom: 15px;
+       
+            // cursor: pointer;
+            // position: relative;
+            // width: 100%;
+            // justify-content: center;
+
             justify-content: center;
             // align-items: center;
             cursor: pointer;
-            margin-left: 6px;
-            justify-content: baseline;
-            margin: 25px;
+            margin-right: 25px;
+            // justify-content: baseline;
+      
             cursor: pointer;
             position: relative;
             width: 100%;
@@ -400,6 +446,7 @@
         justify-content: center;
         // align-items: center;
         cursor: pointer;
+        margin-left: 10px;
 
 
         @media screen and(min-width: 400px)and(max-width: 1000px){

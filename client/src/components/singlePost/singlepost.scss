@@ -2,13 +2,16 @@
   
  
     // width:100%;
+    overflow-x: hidden;
+    // overflow-y: hidden;
+  
 
 
     .singlePostWrapper{
         padding: 50px 50px;
         width: 100%;
         // background-color: aqua;
-        height: 200px;
+        height: 900px;
         justify-content: center;
         margin-left: 50px;
 
@@ -27,21 +30,31 @@
             font-family: "Lora", sans-serif;
            border: none;
             border-bottom: 1px solid lightgrey;
+
         }
         .singlePostTitleInput:focus{
             outline:none;
           }
 
         .singlePostDescInput{
-            width: 70%;
+            width: 50%;
             border:none;
             margin:10px;
             font-size: 20px;
             font-family: "Lora", sans-serif;
+            resize: none;
+            // height: 550px;
+            height: 250px;
+           
         }
 
         .singlePostDescInput:focus {
-            outline: none;
+            // outline: none;
+        }
+        .singlePostDesc{
+            line-height: 1.8rem;
+            width: 60%;
+
         }
 
         .signlePostButton{
@@ -53,6 +66,8 @@
             border-radius: 8px;
             height: 28px;
             cursor: pointer;
+         
+        
          }
          .signlePostButton:hover{
             background-color: #0a577e;
@@ -70,7 +85,7 @@
             }
 
             .singlePostIconDelete{
-                margin-left:750px;
+                margin-left: 20px;
                 cursor: pointer;
             }
 
@@ -78,6 +93,12 @@
 
            
          }
+         .singlePostInfo{
+            color: rgb(102, 102, 94);
+            margin:10px 10px;
+         }
+
+
 
         
 

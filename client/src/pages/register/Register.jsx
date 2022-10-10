@@ -15,7 +15,8 @@ const Register = () => {
     e.preventDefault()
     dispatch({type:"LOGIN_START"})
     try {
-      const res = await axios.post("/auth/register", {
+      // const res = await axios.post("/auth/register", {
+      const res = await axios.post("https://blog-app-api.onrender.com/api/auth/register", {
         username,
         email,
         password,
@@ -23,7 +24,7 @@ const Register = () => {
       localStorage.setItem("user", JSON.stringify(res))
       console.log(res)
       dispatch({type:"LOGIN_SUCCESS",payload: res.data})
-      res.data && window.location.replace("/login");
+      res.data && window.location.replace("/");
     }catch(error) {
       console.log(error)
      

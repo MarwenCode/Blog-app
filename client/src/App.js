@@ -30,8 +30,8 @@ function App() {
           <Route path="/login" element={user ? <Home /> : <Login />} />
           <Route path="/write" element={user ? <Write /> : <Register />} />
           <Route path="/post/:postId" element={<SinglePost />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/aboutme" element={<AboutMe />} />
+          <Route path="/profile" element={user ? <Profile /> : <Login />} />
+          <Route path="/aboutme" element={user ? <AboutMe /> : <Login />} />
         </Routes>
       </div>
       <ToastContainer />
