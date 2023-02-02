@@ -10,11 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const SinglePost = () => {
   // const publicFolder = "http://localhost:8000/images/";
-<<<<<<< HEAD
   const publicFolder = "https://blog-app-api.onrender.com/images/";
-=======
-  const publicFolder = "https://blog-app-frontend.onrender.com/images/";
->>>>>>> main
   const { user } = useContext(AppContext);
 
   const [title, setTitle] = useState("");
@@ -30,13 +26,8 @@ const SinglePost = () => {
 
   useEffect(() => {
     const getPost = async () => {
-<<<<<<< HEAD
       // const res = await axios.get("/post/" + path);
       const res = await axios.get("https://blog-app-api.onrender.com/api/post/" + path);
-=======
-      const res = await axios.get("/post/" + path);
-      // const res = await axios.get("https://blog-app-api.onrender.com/api/post/" + path);
->>>>>>> main
       console.log(res.data);
       setPost(res.data);
       setTitle(res.data.title);

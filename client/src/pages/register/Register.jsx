@@ -16,13 +16,8 @@ const Register = () => {
     e.preventDefault()
     dispatch({type:"LOGIN_START"})
     try {
-<<<<<<< HEAD
       // const res = await axios.post("/auth/register", {
       const res = await axios.post("https://blog-app-api.onrender.com/api/auth/register", {
-=======
-      const res = await axios.post("/auth/register", {
-        // const res = await axios.post("https://blog-app-api.onrender.com/api/auth/register", {
->>>>>>> main
         username,
         email,
         password,

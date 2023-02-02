@@ -17,11 +17,7 @@ import { Link } from "react-router-dom";
 const AboutMe = () => {
   const {user} = useContext(AppContext)
   // const publicForlder = "http://localhost:8000/images/";
-<<<<<<< HEAD
   const publicForlder = "https://blog-app-api.onrender.com/images/";
-=======
-  const publicFolder = "https://blog-app-frontend.onrender.com/images/";
->>>>>>> main
   const [posts, setPosts] = useState([]);
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -29,13 +25,8 @@ const AboutMe = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-<<<<<<< HEAD
       // const res = await axios.get(`/post/myposts/${user._id}`);
       const res = await axios.get(`https://blog-app-api.onrender.com/api/post/myposts/${user._id}`);
-=======
-      const res = await axios.get(`/post/myposts/${user._id}`);
-      // const res = await axios.get(`https://blog-app-api.onrender.com/api/post/myposts/${user._id}`);
->>>>>>> main
       console.log(res);
       setPosts(res.data);
     };

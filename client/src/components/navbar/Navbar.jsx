@@ -9,12 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { user, dispatch, toggleTheme, theme } = useContext(AppContext);
-<<<<<<< HEAD
   const publicFolder = "https://blog-app-api.onrender.com/images/";
-=======
-  const publicFolder = "https://blog-app-frontend.onrender.com/images/";
-  // const publicFolder = "http://localhost:8000/images/";
->>>>>>> main
   const [posts, setPosts] = useState([]);
   const Navigate = useNavigate();
 
@@ -29,14 +24,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-<<<<<<< HEAD
       // const res = await axios.get("/post");
       const res = await axios.get("https://blog-app-api.onrender.com/api/post");
-=======
-      const res = await axios.get("/post");
-      // const res = await axios.get("https://blog-app-api.onrender.com/api/post");
-    
->>>>>>> main
       console.log(res);
       setPosts(res.data);
     };
@@ -69,7 +58,6 @@ const Navbar = () => {
             <span className="slider"></span>
           </label>
         </div>
-<<<<<<< HEAD
 
         <ul className="list">
           {!user ? (
@@ -82,30 +70,12 @@ const Navbar = () => {
                 <li className="item"> My Blogs</li>
               </Link>
 
-=======
-        <ul className="list">
-          {user ? (
-            <>
-              <Link to="/aboutme" className="link">
-                <li className="item">My Blogs</li>
-              </Link>
-
-              <Link to="/" className="link">
-                <li className="item">Home</li>
-              </Link>
->>>>>>> main
               <Link to="write" className="link">
                 <li className="item">Write</li>
               </Link>
               <Link to="profile" className="link">
                 <li className="item">Profile</li>
               </Link>
-<<<<<<< HEAD
-=======
-            </>
-          ) : (
-            <>
->>>>>>> main
               <Link to="/" className="link">
                 <li className="item">Home</li>
               </Link>

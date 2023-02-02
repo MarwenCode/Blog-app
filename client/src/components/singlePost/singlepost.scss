@@ -1,14 +1,11 @@
 .singlePost{
     // overflow: hidden;
   
-<<<<<<< HEAD
  
     // width:100%;
     overflow-x: hidden;
     // overflow-y: hidden;
   
-=======
->>>>>>> main
 
 
     .singlePostWrapper{
@@ -40,7 +37,6 @@
             object-fit: cover;
         }
 
-<<<<<<< HEAD
         .singlePostTitleInput{
             text-align: center;
             margin: 10px;
@@ -48,39 +44,6 @@
             font-family: "Lora", sans-serif;
            border: none;
             border-bottom: 1px solid lightgrey;
-=======
-
-        .top {
-            display: flex;
-            width: 40%;
-      
-
-            
-      
-
-          .singlePostEdit{
-            display: inline-flex;
-            margin-left: 300px;
-        
-            .singlePostIconEdit{
-                margin-left:50px;
-                cursor: pointer;
-            }
-
-            .singlePostIconDelete{
-                margin-left:50px;
-                cursor: pointer;
-            }
-
-
-
-           
-         }
-
-
-
-
->>>>>>> main
 
         }
 
@@ -90,7 +53,6 @@
 
 
         .singlePostDescInput{
-<<<<<<< HEAD
             width: 50%;
             border:none;
             margin:10px;
@@ -108,25 +70,6 @@
         .singlePostDesc{
             line-height: 1.8rem;
             width: 60%;
-=======
-            // border:none;
-            margin-top:30px;
-            font-size: 20px;
-            font-family: "Lora", sans-serif;
-           
-
-            resize: none;
-            width: 80%;
-            // border-radius: 5px;
-            overflow: hidden;
-            min-height: 20vh;
-            // max-height: 250px;
-            text-align: start;
-        }
-
-        .singlePostDescInput:focus {
-            outline: none;
->>>>>>> main
 
         }
 
@@ -149,7 +92,6 @@
           
          }
 
-<<<<<<< HEAD
          .singlePostEdit{
             display: inline;
             margin: 10px;
@@ -174,9 +116,6 @@
          }
 
 
-=======
-       
->>>>>>> main
 
         
 

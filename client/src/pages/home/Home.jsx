@@ -19,13 +19,8 @@ const Home = () => {
 
   useEffect(() => {
       const fetchPosts = async() => {
-<<<<<<< HEAD
           // const res = await axios.get("/post")
           const res = await axios.get("https://blog-app-api.onrender.com/api/post")
-=======
-          const res = await axios.get("/post")
-          // const res = await axios.get("https://blog-app-api.onrender.com/api/post")
->>>>>>> main
           console.log(res)
           setPosts(res.data)
           
