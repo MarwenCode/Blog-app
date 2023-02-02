@@ -1,4 +1,5 @@
 import axios from "axios";
+import {axiosInstance} from "../../config";
 import React, { useState, useEffect,useContext} from "react";
 import ProfileSideBar from "../../components/profileSideBar/ProfileSideBar";
 import "./aboutme.scss";
@@ -16,7 +17,11 @@ import { Link } from "react-router-dom";
 const AboutMe = () => {
   const {user} = useContext(AppContext)
   // const publicForlder = "http://localhost:8000/images/";
+<<<<<<< HEAD
   const publicForlder = "https://blog-app-api.onrender.com/images/";
+=======
+  const publicFolder = "https://blog-app-frontend.onrender.com/images/";
+>>>>>>> main
   const [posts, setPosts] = useState([]);
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -24,8 +29,13 @@ const AboutMe = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
+<<<<<<< HEAD
       // const res = await axios.get(`/post/myposts/${user._id}`);
       const res = await axios.get(`https://blog-app-api.onrender.com/api/post/myposts/${user._id}`);
+=======
+      const res = await axios.get(`/post/myposts/${user._id}`);
+      // const res = await axios.get(`https://blog-app-api.onrender.com/api/post/myposts/${user._id}`);
+>>>>>>> main
       console.log(res);
       setPosts(res.data);
     };
@@ -65,7 +75,8 @@ const AboutMe = () => {
           <>
             <div className="singlePost">
               <div className="singlePostWrapper">
-                <img className="singlePostImg" src={publicForlder + post.photo}  alt="" />
+                {/* <img className="singlePostImg" src={publicForlder + post.photo}  alt="" /> */}
+                <img className="singlePostImg" src="/images/image3.jpeg" alt="" />
               
 
                 <div className="singlePostEdit">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./profilesidebar.scss";
 import axios from "axios";
+import {axiosInstance} from "../../config";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
 
@@ -17,8 +18,14 @@ const getlocalStorage = () => {
 
 const ProfileSideBar = () => {
   const { user } = useContext(AppContext);
+<<<<<<< HEAD
   // const publicFolder = "http://localhost:8000/images/";
   const publicFolder = "https://blog-app-api.onrender.com/images/";
+=======
+  const publicFolder = "https://blog-app-frontend.onrender.com/images/";
+  // const publicFolder = "http://localhost:8000/images/";
+
+>>>>>>> main
 
   const [expression, setExpression] = useState("");
   const [inputGroup, setInputGroup] = useState(getlocalStorage());
@@ -77,7 +84,8 @@ const ProfileSideBar = () => {
   return (
     <div className="ProfileSideBar">
       <div className="profileUp">
-        <img className="profilepic" src={publicFolder + user.profilePic} />
+        {/* <img className="profilepic" src={publicFolder + user.profilePic} /> */}
+        <img className="profilepic" src="/images/image1.jpg"/>
         <span className="name">{user?.username}</span>
       </div>
      

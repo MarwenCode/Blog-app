@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import "./post.scss";
 import { Link } from "react-router-dom";
 
@@ -7,6 +8,17 @@ export default function Post({ post }) {
   return (
     <div className="post">
       {post.photo && <img className="postImg" src={publicForlder + post.photo} alt="" />}
+=======
+const Post = ({post}) => {
+  const publicFolder = "https://blog-app-frontend.onrender.com/images/";
+  // const publicForlder = "http://localhost:8000/images/";
+  return (
+    <div className="post">
+      {post.photo && (
+        // <img className="postImg" src={ publicForlder + post.photo} alt="" />
+        <img className="postImg" src="/images/image3.jpeg" alt="" />
+      )}
+>>>>>>> main
       <div className="postInfo">
         {/* <div className="postCats">
           {post.categories.map((c) => (

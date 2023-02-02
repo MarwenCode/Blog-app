@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import {axiosInstance} from "../../config";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
 import { Link, useLocation } from "react-router-dom";
@@ -9,7 +10,11 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const SinglePost = () => {
   // const publicFolder = "http://localhost:8000/images/";
+<<<<<<< HEAD
   const publicFolder = "https://blog-app-api.onrender.com/images/";
+=======
+  const publicFolder = "https://blog-app-frontend.onrender.com/images/";
+>>>>>>> main
   const { user } = useContext(AppContext);
 
   const [title, setTitle] = useState("");
@@ -25,8 +30,13 @@ const SinglePost = () => {
 
   useEffect(() => {
     const getPost = async () => {
+<<<<<<< HEAD
       // const res = await axios.get("/post/" + path);
       const res = await axios.get("https://blog-app-api.onrender.com/api/post/" + path);
+=======
+      const res = await axios.get("/post/" + path);
+      // const res = await axios.get("https://blog-app-api.onrender.com/api/post/" + path);
+>>>>>>> main
       console.log(res.data);
       setPost(res.data);
       setTitle(res.data.title);
@@ -90,9 +100,10 @@ const SinglePost = () => {
 
   return (
     <div className="singlePost">
-      <ProfileSideBar />
+      <ProfileSideBar  className="sideBar"/>
       <div className="singlePostWrapper">
-        <img className="singlePostImg" src={publicFolder + post.photo} alt="" />
+        {/* <img className="singlePostImg" src={publicFolder + post.photo} alt="" /> */}
+        <img className="singlePostImg" src="/images/image3.jpeg" alt="" />
         {updateMode ? (
           <input
             className="singlePostTitleInput"
@@ -101,21 +112,30 @@ const SinglePost = () => {
             onChange={(e) => setTitle(e.target.value)}
           />
         ) : (
-          <h1 className="singlePostTitle">
+          <div className="top">
+              <h1 className="singlePostTitle">
             {title}
+            </h1>
+
+          
             <div className="singlePostEdit">
               <i
                 className="singlePostIconEdit far fa-edit"
                 onClick={() => setUpdateMode(true)}></i>
               <i className="singlePostIconDelete far fa-trash-alt"  onClick={handleDelete}></i>
             </div>
-          </h1>
+          
+          
+          </div>
+        
+          
         )}
 
         <div className="singlePostInfo">
           <span>
             Author: {post.username}
             <b className="singlePostAuthor"></b>
+          
           </span>
         </div>
 

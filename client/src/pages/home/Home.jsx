@@ -4,6 +4,7 @@ import Header from '../../components/header/Header';
 import Posts from '../../components/posts/Posts';
 import { useLocation } from 'react-router-dom';
 import axios from "axios";
+import { axiosInstance } from '../../config';
 // import { AppContext } from "../../context/context";
 
 
@@ -18,8 +19,13 @@ const Home = () => {
 
   useEffect(() => {
       const fetchPosts = async() => {
+<<<<<<< HEAD
           // const res = await axios.get("/post")
           const res = await axios.get("https://blog-app-api.onrender.com/api/post")
+=======
+          const res = await axios.get("/post")
+          // const res = await axios.get("https://blog-app-api.onrender.com/api/post")
+>>>>>>> main
           console.log(res)
           setPosts(res.data)
           
@@ -30,7 +36,7 @@ const Home = () => {
 
   return (
     <div className='home'>
-        <Header />
+  
         <Posts  posts={posts}/>
         
     </div>

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
 import { AppContext } from "../../context/context";
+import { axiosInstance } from '../../config';
 import "./profile.scss";
 
 const Profile = () => {
@@ -27,14 +28,24 @@ const Profile = () => {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
+<<<<<<< HEAD
         // await axios.post("/upload", data);
         await axios.post("https://blog-app-api.onrender.com/api/upload", data);
+=======
+        await axios.post("/upload", data);
+        // await axios.post("https://blog-app-api.onrender.com/api/upload", data);
+>>>>>>> main
       } catch (err) {}
     }
 
     try {
+<<<<<<< HEAD
       // const res = await axios.put("/user/" + user._id, updatedUser);
       const res = await axios.put("https://blog-app-api.onrender.com/api/user/" + user._id, updatedUser);
+=======
+      const res = await axiosInstance.put("/post/user/" + user._id, updatedUser);
+      // const res = await axios.put("https://blog-app-api.onrender.com/api/post/user/" + user._id, updatedUser);
+>>>>>>> main
 
       console.log(res);
       setSuccessMessage(true);
