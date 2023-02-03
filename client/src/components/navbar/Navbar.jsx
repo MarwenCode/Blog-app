@@ -4,7 +4,6 @@ import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../context/context";
 import axios from "axios";
-import {axiosInstance} from "../../config";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -110,7 +109,6 @@ const Navbar = () => {
                   </div>
                 );
               })}
-              
           </div>
         )}
 
@@ -132,8 +130,7 @@ const Navbar = () => {
             <span className="logout" onClick={handleLogout}>
               Logout
             </span>
-            {/* <img className="topImg" src={publicFolder + user.profilePic} /> */}
-            <img className="topImg" src="/images/image1.jpg" />
+            <img className="topImg" src={publicFolder + user.profilePic} />
           </>
         ) : (
           <>
@@ -151,5 +148,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-

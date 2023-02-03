@@ -2,7 +2,6 @@ import React,{useState, useEffect, useContext}  from 'react';
 import "./register.scss";
 import axios from 'axios';
 import { AppContext } from '../../context/context';
-import { axiosInstance } from '../../config';
 
 const Register = () => {
   const {dispatch } = useContext(AppContext)

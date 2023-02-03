@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
 import { AppContext } from "../../context/context";
-import { axiosInstance } from '../../config';
 import "./profile.scss";
 
 const Profile = () => {

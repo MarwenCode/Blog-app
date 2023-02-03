@@ -4,7 +4,6 @@ import Header from '../../components/header/Header';
 import Posts from '../../components/posts/Posts';
 import { useLocation } from 'react-router-dom';
 import axios from "axios";
-import { axiosInstance } from '../../config';
 // import { AppContext } from "../../context/context";
 
 
@@ -31,7 +30,7 @@ const Home = () => {
 
   return (
     <div className='home'>
-  
+        <Header />
         <Posts  posts={posts}/>
         
     </div>

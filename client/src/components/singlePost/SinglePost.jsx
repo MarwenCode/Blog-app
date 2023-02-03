@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {axiosInstance} from "../../config";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
 import { Link, useLocation } from "react-router-dom";
@@ -91,10 +90,9 @@ const SinglePost = () => {
 
   return (
     <div className="singlePost">
-      <ProfileSideBar  className="sideBar"/>
+      <ProfileSideBar />
       <div className="singlePostWrapper">
-        {/* <img className="singlePostImg" src={publicFolder + post.photo} alt="" /> */}
-        <img className="singlePostImg" src="/images/image3.jpeg" alt="" />
+        <img className="singlePostImg" src={publicFolder + post.photo} alt="" />
         {updateMode ? (
           <input
             className="singlePostTitleInput"
@@ -103,30 +101,21 @@ const SinglePost = () => {
             onChange={(e) => setTitle(e.target.value)}
           />
         ) : (
-          <div className="top">
-              <h1 className="singlePostTitle">
+          <h1 className="singlePostTitle">
             {title}
-            </h1>
-
-          
             <div className="singlePostEdit">
               <i
                 className="singlePostIconEdit far fa-edit"
                 onClick={() => setUpdateMode(true)}></i>
               <i className="singlePostIconDelete far fa-trash-alt"  onClick={handleDelete}></i>
             </div>
-          
-          
-          </div>
-        
-          
+          </h1>
         )}
 
         <div className="singlePostInfo">
           <span>
             Author: {post.username}
             <b className="singlePostAuthor"></b>
-          
           </span>
         </div>
 

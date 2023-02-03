@@ -1,5 +1,4 @@
 import axios from "axios";
-import {axiosInstance} from "../../config";
 import React, { useState, useEffect,useContext} from "react";
 import ProfileSideBar from "../../components/profileSideBar/ProfileSideBar";
 import "./aboutme.scss";
@@ -66,8 +65,7 @@ const AboutMe = () => {
           <>
             <div className="singlePost">
               <div className="singlePostWrapper">
-                {/* <img className="singlePostImg" src={publicForlder + post.photo}  alt="" /> */}
-                <img className="singlePostImg" src="/images/image3.jpeg" alt="" />
+                <img className="singlePostImg" src={publicForlder + post.photo}  alt="" />
               
 
                 <div className="singlePostEdit">

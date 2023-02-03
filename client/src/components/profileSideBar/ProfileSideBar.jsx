@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./profilesidebar.scss";
 import axios from "axios";
-import {axiosInstance} from "../../config";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
 
@@ -78,8 +77,7 @@ const ProfileSideBar = () => {
   return (
     <div className="ProfileSideBar">
       <div className="profileUp">
-        {/* <img className="profilepic" src={publicFolder + user.profilePic} /> */}
-        <img className="profilepic" src="/images/image1.jpg"/>
+        <img className="profilepic" src={publicFolder + user.profilePic} />
         <span className="name">{user?.username}</span>
       </div>
      
