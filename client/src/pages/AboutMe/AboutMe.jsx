@@ -38,12 +38,12 @@ const AboutMe = () => {
 
   const nextSlide = () => {
   
-    setCurrentImage( currentImage >=4 ? 0 : currentImage + 1)
+    setCurrentImage( currentImage >=2 ? 0 : currentImage + 1)
     // setCurrentImage( currentImage === length ? 0 : currentImage + 1)
   }
   const prevSlide = () => {
     // setCurrentImage(currentImage <= 0 ? currentImage  : currentImage -1)
-    setCurrentImage(currentImage <= 0 ? 4  : currentImage -1)
+    setCurrentImage(currentImage <= 0 ? 2  : currentImage -1)
   }
 
 
